@@ -1,0 +1,32 @@
+class Student {
+    String name;
+    double bill;
+
+    Student(String name, double bill) {
+        this.name = name;
+        this.bill = bill;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student[] students = {
+            new Student("ujwala", 5000),
+            new Student("neelima", 7500),
+            new Student("joshika", 6200),
+            new Student("Neha", 9000)
+        };
+
+        Student highest = students[0];
+
+        for (Student student : students) {
+            if (student.bill > highest.bill) {
+                highest = student;
+            }
+        }
+
+        System.out.println("Student with highest bill:");
+        System.out.println("Name: " + highest.name);
+        System.out.println("Bill: " + highest.bill);
+    }
+}
